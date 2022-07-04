@@ -14,13 +14,13 @@ public class QS16 {
     }
 
     public static ListNode reverList(ListNode head) {
+        ListNode cur = head;
         ListNode pre = null;
-        ListNode curr = head;
-        while (curr != null) {
-            ListNode tmp = curr.next;
-            curr.next = pre;
-            pre = curr;
-            curr = tmp;
+        while (cur!=null){
+            ListNode temp = cur.next;
+            cur.next=pre;
+            pre = cur;
+            cur=temp;
         }
         return pre;
     }
